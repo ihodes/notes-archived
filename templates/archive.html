@@ -1,9 +1,10 @@
 <ul id="archive">
     $for(posts)$
         <li>
+          <time datetime="$rdate$" class="pubdate">$date$</time>
+          <br />
           <span>
             <a href="$url$">$title$</a> &nbsp;
-            <time datetime="$rdate$" class="pubdate">$date$</time>
           </span>
 
           <div class="summary">

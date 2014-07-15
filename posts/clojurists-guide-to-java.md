@@ -11,7 +11,7 @@ Using Java from Clojure is actually pretty painless, contrary to what people who
 
 This guide doesn't aim to comprehensively cover all the ways to use Java from Clojure, nor does it attempt to explain the intricacies of Java the language or the JVM. Rather, it should serve as a "Getting Started with Java from Clojure" guide that will hopefully enable you to more easily navigate the Java documentation and use Java in your Clojure projects when the need arises. One of the nice things about Clojure is that you don't really need to know Java to use it from Clojure.
 
-So without further ado:
+So, without further ado:
 
 # A Clojurist's Guide to Java
 
@@ -114,7 +114,7 @@ Be sure to look into the other important Clojure functions like proxy and reify 
 
 ### Additional reading:
 
-*   [Static or Nonstatic?][3] ;; a guide to statis vs. nonstatic methods
+*   [Static or Nonstatic?][3] ;; a guide to static vs. nonstatic methods
 *   [The Java Class Library][4] ;; an overview of what's out there, with a nice picture
 *   [The JavaDocs][2] ;; linked above
 *   [Clojure Java Interop Docs][5] ;; from the Clojure website

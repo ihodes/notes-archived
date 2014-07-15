@@ -1,6 +1,9 @@
 body { font-size: 20px;
        font-family: "proxima-nova", Helvetica, sans-serif;
-       overflow-x: hidden; word-wrap: break-word; padding-bottom: 59px; }
+       overflow-x: hidden;
+       word-wrap: break-word;
+       padding-bottom: 59px;
+}
 img { max-width: 100%; }
 
 
@@ -10,7 +13,7 @@ nav { margin-bottom: 150px; padding: 0 27px; text-align: center; }
 nav ul { margin: 4px 0 0 0; padding: 0; text-align: center; }
 nav ul li { display: inline; bullet-type: none; margin-right: 13px; }
 nav li a { text-decoration: none; border-top: 4px solid black; }
-nav li a:hover { border-top: 4px solid gold; }
+nav li a:hover { border-top: 4px solid #ff773d; }
 
 nav a { color: black; }
 nav a:visited { color: black; }
@@ -29,8 +32,51 @@ article {
 
 article code {
     font-family: Inconsolata;
-    line-height: 1.5em;
+    background: #fcfcfc;
+    border: 1px solid #dadada;
+    padding: 0 0.3em;
 }
+
+article pre code { border: none; padding: 0; background: none; }
+article pre {
+    line-height: 1.2em;
+    border-radius: 2px;
+    border-left: 1px solid #deddd9;
+    padding: 19px 23px 19px 23px;
+    margin: 0 -23px;
+    background: #fcfcfc;
+}
+
+article p.caption {
+    font-style: italic;
+    margin-top: 0;
+    font-size: 0.8em;
+}
+
+article blockquote {
+    margin: 0;
+    border-radius: 2px;
+    padding: 17px 23px 17px 47px;
+    background: #fcfcfc;
+    font-family: Garamond;
+    font-size: 1.2em;
+}
+
+article blockquote:before {
+    content: "“";
+    margin-left: -90px;
+    margin-top: 47px;
+    position: absolute;
+    font-size: 7em;
+}
+
+article img {
+    text-align: center;
+}
+
+article hr { display: block; height: 1px;
+             border: 0; border-top: 1px solid #deddd9;
+             margin: 2em 1em; padding: 0; }
 
 /* content */
 time.pubdate { font-family: Inconsolata; }
@@ -46,6 +92,11 @@ div#content pre {
 }
 
 /* post lists */
-ul#archive li { list-style-type: none; margin-bottom: 13px;}
+ul#archive li { list-style-type: none; margin-bottom: 23px;
+                border-left: 1px solid #deddd9;
+                padding-left: 23px;
+              }
 ul#archive .summary { font-style: italic; }
+ul#archive a { text-decoration: none; line-height: 2em;}
+ul#index { padding-bottom: 5px; }
 ul#index li { list-style-type: none; margin-bottom: 13px; }
