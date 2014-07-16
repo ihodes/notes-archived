@@ -5,6 +5,13 @@ import           Hakyll
 import           Data.List              (isInfixOf)
 import           System.FilePath.Posix  (takeBaseName, takeDirectory,
                                          (</>), splitFileName)
+
+import Text.Pandoc
+import Text.Pandoc.Shared
+import Text.Pandoc (bottomUp, Extension(Ext_markdown_in_html_blocks),
+                    HTMLMathMethod(MathML), Inline(..),
+                    ObfuscationMethod(NoObfuscation), Pandoc(..),
+                    ReaderOptions(..), WriterOptions(..))
 -- TODO
 -- [X] RSS
 -- [X] Proper link structure (e.g. no .md, no .html)
@@ -20,7 +27,11 @@ import           System.FilePath.Posix  (takeBaseName, takeDirectory,
 
 main :: IO ()
 main = hakyll $ do
-    match "images/*" $ do
+    match "images/**" $ do
+      route   idRoute
+      compile copyFileCompiler
+
+    match "js/**" $ do
       route   idRoute
       compile copyFileCompiler
 
@@ -30,7 +41,7 @@ main = hakyll $ do
 
     match "posts/*md" $ do
       route $ niceRoute `composeRoutes` (gsubRoute "^posts" (const "p"))
-      compile $ pandocCompiler
+      compile $ articleCompiler
         >>= loadAndApplyTemplate "templates/post.html"    postCtx
         >>= saveSnapshot "content"
         >>= loadAndApplyTemplate "templates/default.html" postCtx
@@ -107,7 +118,7 @@ niceRoute = customRoute createIndexRoute
       where p = toFilePath ident
 
 --------------------------------------------------------------------------------
--- replace url of the form foo/bar/index.html by foo/bar
+-- Replace url of the form foo/bar/index.html by foo/bar
 removeIndexHtml :: Item String -> Compiler (Item String)
 removeIndexHtml item = return $ fmap (withUrls removeIndexStr) item
 
@@ -119,3 +130,15 @@ removeIndexStr url = case splitFileName url of
   where isLocal uri = not (isInfixOf "://" uri)
 
 --------------------------------------------------------------------------------
+-- Read a page, add default fields, substitute fields and render with Pandoc.
+articleCompiler :: Compiler (Item String)
+articleCompiler = pandocCompilerWith defaultHakyllReaderOptions articleWriterOptions
+
+--------------------------------------------------------------------------------
+-- Pandoc writer options for articles on Extralogical.
+articleWriterOptions :: WriterOptions
+articleWriterOptions = defaultHakyllWriterOptions
+    { writerEmailObfuscation = NoObfuscation,
+      writerHtml5 = True,
+      writerHTMLMathMethod   = Text.Pandoc.MathML Nothing
+    }
