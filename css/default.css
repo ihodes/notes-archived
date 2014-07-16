@@ -5,6 +5,7 @@ body { font-size: 20px;
        margin: 0 auto;
        word-wrap: break-word;
        padding-bottom: 59px;
+       padding: 0 13px 59px 13px;
 }
 img { max-width: 100%; }
 
@@ -13,7 +14,8 @@ img { max-width: 100%; }
 nav { margin-bottom: 150px; padding: 0 27px; text-align: center; }
 
 nav ul { margin: 4px 0 0 0; padding: 0; text-align: center; }
-nav ul li { display: inline; bullet-type: none; margin-right: 13px; }
+nav ul li { display: inline-block; bullet-type: none; margin-right: 13px;
+            margin-bottom: 13px; }
 nav li a { text-decoration: none; border-top: 4px solid black; }
 nav li a:hover { border-top: 4px solid #ff773d; }
 
