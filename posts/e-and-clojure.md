@@ -23,14 +23,14 @@ It's honestly a trivial problem; in fact, here's a little solution right up fron
       n 1.0))
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    user> (time (to-one-avg 100000000)_
+    user> (time (to-one-avg 100000000))
 
     "Elapsed time: 59539.291 msecs"
     2.7182 5238
 
 Error as compared to Math/E: 0.000067438. Not great.
 
-That's a solution based off of the cool fact that, on average, of the numbers of random numbers between 0 and 1 is, well, 2.7182… e. (See [this blog post][3] for a little explanation.) The problem is, it takes a lot of time to get an only moderately accurate answer. Even doing it in C results in less than stellar results, and still sluggish performance:
+That's a solution based off of the cool fact that the expected (average) number of random numbers between 0 and 1 needed to sum to 1 or more is, well, 2.7182… e. (See [this blog post][3] for a little explanation.) The problem is, it takes a lot of time to get an only moderately accurate answer. Even doing it in C results in less than stellar results, and still sluggish performance:
 
 See it in [a Gist][4], as it takes up too much room.
 
