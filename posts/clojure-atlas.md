@@ -12,4 +12,4 @@ The Atlas is essentially a live graph connecting functions, macros, "Classes", r
 
 <img src="/images/clojure-atlas-screenshot.png" alt="example clojure atlas screenshot" width="636" height="512" />
 
-It costs $40 if you buy the Atlas for Clojure 1.2 and 1.3 (coming soon), or just $25 if you'd like to buy the 1.2 version. It is definitely worth a look.
+It costs <span>\$</span>40 if you buy the Atlas for Clojure 1.2 and 1.3 (coming soon), or just <span>\$</span>5 if you'd like to buy the 1.2 version. It is definitely worth a look.

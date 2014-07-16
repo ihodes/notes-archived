@@ -5,7 +5,7 @@ summary: Wherein we configure Pianobar to integrate with one's workflow.
 categories: hacking
 date: 2011-05-29
 ---
-If you love using Pandora, but really wish they had a command-line (or at least non-Flash) version of the desktop application, this post will make your day. An absolutely wonderful CLI utility called <a href="/web/20120415143801/https://github.com/PromyLOPh/pianobar">pianobar</a> solves this problem for you, and a few more you didn't know you had. Something to note: there are no advertisements when using pianobar; this may be violating Pandora's terms of service. Because I think Pandora is supplying a great service, I pay for the $3/month Pandora+ membership and would not be hearing advertisements anyway: if this method seems like a great way to listen to music I'd recommend you pay the $36 too.
+If you love using Pandora, but really wish they had a command-line (or at least non-Flash) version of the desktop application, this post will make your day. An absolutely wonderful CLI utility called <a href="/web/20120415143801/https://github.com/PromyLOPh/pianobar">pianobar</a> solves this problem for you, and a few more you didn't know you had. Something to note: there are no advertisements when using pianobar; this may be violating Pandora's terms of service. Because I think Pandora is supplying a great service, I pay for the <span>\$</span>3/month Pandora+ membership and would not be hearing advertisements anyway: if this method seems like a great way to listen to music I'd recommend you pay the <span>\$</span>36 too.
 
 This tutorial will only cover setting up this environment on a Mac, though if you're running Linux you should be able to do much of the same using a few different applications in some cases.
 
@@ -13,7 +13,7 @@ This tutorial will only cover setting up this environment on a Mac, though if yo
 
 With that said, you can build pianobar from source, or use a package manager like <a href="/web/20120415143801/http://mxcl.github.com/homebrew/">brew</a> to install it. Occasionally you need to update pianobar in order to get the newest auth keys. This should not be the difficult step.
 
-You'll also want to install <a href="/web/20120415143801/http://www.alfredapp.com/">Alfred</a> (Alfred deserves a whole post to itself) to get this to work, though you could accomplish similar results with KeyboardMaestro or another application launcher like LaunchBar. In order to do this using Alfred, you'll need to buy the powerpack (basically, an upgrade) for around $20. Any way you have of executing scripts via keyboard shortcut will work as well, as will your command-line itself, though. Alfred is definitely worth twenty dollars.
+You'll also want to install <a href="/web/20120415143801/http://www.alfredapp.com/">Alfred</a> (Alfred deserves a whole post to itself) to get this to work, though you could accomplish similar results with KeyboardMaestro or another application launcher like LaunchBar. In order to do this using Alfred, you'll need to buy the powerpack (basically, an upgrade) for around <span>$</span>20. Any way you have of executing scripts via keyboard shortcut will work as well, as will your command-line itself, though. Alfred is definitely worth twenty dollars.
 
 Finally, you will need <a href="/web/20120415143801/http://growl.info/">Growl</a> if you don't already have it, and its CLI utility <a href="/web/20120415143801/http://growl.info/extras.php#growlnotify">`growlnotify`</a>. If you're opposed to Growl for whatever reason, you don't need it, but it's a nice method of visual feedback.
 
@@ -41,6 +41,6 @@ Finally, we get to tie this all together:
 
 Here you can see my current (rapidly growing) list of shell commands Alfred handles for me. More pertinent are the "p" and "pp" commands. The former runs: `echo "{query}" > ~/.config/pianobar/ctl`, while the second just toggles play by passing the FIFO "p". In this way, I can open Alfred with `CMD+SPACE`, type "p" and a space, then pass any command to pianobar from there. Most often I send "n" for "next song" or "e" for "explain", which displays the title, artist and album of the song via Growl. If I wanted to, I could bind any function keys I'd like to these commands as well, but typing 3 characters works fine for me.
 
-So I have a lightweight, easily controlled music setup. If you're cheap, the cost is free. If you'd like to support Pandora as well as get a fantastically useful application, that'll be $46.
+So I have a lightweight, easily controlled music setup. If you're cheap, the cost is free. If you'd like to support Pandora as well as get a fantastically useful application, that'll be <span>$</span>46.
 
 If you'd like to expand more on this setup, be sure to read the pianobar man pages, which are very helpful; you can customize the keys used to control pianobar, manage even more events and more.
