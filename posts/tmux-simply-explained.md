@@ -6,7 +6,7 @@ categories: programming
 date: 2013-06-06
 ---
 
-If you work in the terminal regularly, and particularly if you work on a number of ongoing software projects, and *particularly* if you try to do everything code-related in the terminal, you should be using [`tmux`](http://tmux.sourceforge.net/) [[wiki]](http://en.wikipedia.org/wiki/Tmux) to mux your ts.
+If you work in the terminal regularly, and particularly if you work on a number of ongoing software projects, and *particularly* if you try to do everything code-related in the terminal, you should be using [`tmux`](http://tmux.sourceforge.net/) [[wiki]](http://en.wikipedia.org/wiki/Tmux) to mux your tees.
 
 It's not immediately clear (and some would say, it's not even eventually clear) what `tmux` does, how it's useful, and what the terms regularly tossed around in it daily use (client, pane, window, server, etc.) mean.
 
@@ -30,4 +30,4 @@ It's also worth noting that multiple clients can connect to the same session, ei
 
 --
 
-If you liked this article, or have any questions, ping me on Twitter [@ihodes](http://twitter.com/ihodes).
+If you liked this article, or have any questions, ping me on Twitter [\@ihodes](http://twitter.com/ihodes).
