@@ -1,7 +1,7 @@
-body { font-size: 20px;
+body { font-size: 1.3em;
        font-family: "proxima-nova", Helvetica, sans-serif;
        overflow-x: hidden;
-       max-width: 600px;
+       max-width: 27em;
        margin: 0 auto;
        word-wrap: break-word;
        padding-bottom: 59px;
@@ -15,8 +15,10 @@ nav { margin-bottom: 150px; padding: 0 27px; text-align: center; }
 
 nav ul { margin: 4px 0 0 0; padding: 0; text-align: center; }
 nav ul li { display: inline-block; bullet-type: none; margin-right: 13px;
-            margin-bottom: 13px; }
-nav li a { text-decoration: none; border-top: 4px solid black; }
+            margin-bottom: 13px;}
+nav li a { display: inline-block; text-decoration: none; border-top: 4px solid black;
+           width: 50px; margin-top: -4px;
+         }
 nav li a:hover { border-top: 4px solid #ff773d; }
 
 nav a { color: black; }
@@ -40,8 +42,14 @@ footer #email {
 }
 
 /* article */
-article {
+article p {
     line-height: 1.5em;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    word-break: break-word;
+    text-align: justify;
 }
 
 article code {
@@ -76,10 +84,14 @@ article blockquote {
     font-size: 1.2em;
 }
 
+article blockquote p {
+    text-align: left;
+}
+
 article blockquote:before {
     content: "“";
     margin-left: -90px;
-    margin-top: 47px;
+    margin-top: -35px;
     position: absolute;
     font-size: 7em;
 }
@@ -109,5 +121,8 @@ ul#archive li { list-style-type: none; margin-bottom: 23px;
                 padding-left: 23px; }
 ul#archive .summary { font-style: italic; }
 ul#archive a { text-decoration: none; line-height: 2em;}
+ul#index { margin-left: -23px; }
 ul#index { padding-bottom: 5px; }
 ul#index li { list-style-type: none; margin-bottom: 13px; }
+ul#index li time { display: inline-block; width: 9em; font-size: 0.5em; }
+def fac(n): return reduce(lambda a, b: a * b, range(1, n+1), 1)a sdjkh askjdh as
