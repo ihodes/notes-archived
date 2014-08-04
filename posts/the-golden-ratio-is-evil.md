@@ -22,7 +22,8 @@ As already mentioned, the Golden Ratio can be calculated using the Fibonacci seq
   (lazy-seq
    (cons (+ n-2 n-1)
          (fibo-from n-1 (+ n-2 n-1)))))
-fn fibo []
+
+(defn fibo []
   (concat [0 1]
           (fibo-from 0 1)))
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -49,7 +50,7 @@ Another way of calculating our fickle ratio is with a simple continued fraction.
       (cond (empty? sd) hd
             :else (recur (first sn) (rest sn)
                          (+ (first sd) (/ hn hd)) (rest sd))))))
-fn simple-continued-fraction
+(defn simple-continued-fraction
   "Returns the final value of the SCF of 'sequence."
   [sequence]
   (generalized-continued-fraction
@@ -95,6 +96,7 @@ Now let's see how many numbers we have to take to get the [number of the beast][
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ {.clojure}
 (defn sum [& xs] (reduce + xs))
+
 (loop [maybebeast (sum (take 1 goldseq)) n 1]
   (cond (= maybebeast 666) n
         :else (recur (apply sum (take (inc n) goldseq))
@@ -119,13 +121,13 @@ Regardless, I find sequences and continued fractions a lot more interesting and 
 Let me leave you with this piece of advice: beware the evil [phi][11]!
 
 [1]: http://copperthoughts.com
- [2]: http://en.wikipedia.org/wiki/Phidias
- [3]: http://en.wikipedia.org/wiki/Fibonacci
- [4]: http://homepage.mac.com/cparada/GML/Tantalus1.html
- [5]: http://copperthoughts.com/p/e-and-clojure/
- [6]: http://mathworld.wolfram.com/EvilNumber.html
- [7]: http://download-llnw.oracle.com/javase/6/docs/api/java/math/BigDecimal.html
- [8]: http://en.wikipedia.org/wiki/Number_of_the_Beast
- [9]: http://en.wikipedia.org/wiki/Tantalus#Story_of_Tantalus
- [10]: http://en.wikipedia.org/wiki/Pentagram
- [11]: http://en.wikipedia.org/wiki/Phi
+[2]: http://en.wikipedia.org/wiki/Phidias
+[3]: http://en.wikipedia.org/wiki/Fibonacci
+[4]: http://homepage.mac.com/cparada/GML/Tantalus1.html
+[5]: http://copperthoughts.com/p/e-and-clojure/
+[6]: http://mathworld.wolfram.com/EvilNumber.html
+[7]: http://download-llnw.oracle.com/javase/6/docs/api/java/math/BigDecimal.html
+[8]: http://en.wikipedia.org/wiki/Number_of_the_Beast
+[9]: http://en.wikipedia.org/wiki/Tantalus#Story_of_Tantalus
+[10]: http://en.wikipedia.org/wiki/Pentagram
+[11]: http://en.wikipedia.org/wiki/Phi

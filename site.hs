@@ -1,27 +1,17 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
-import           Data.Monoid (mappend)
-import           Hakyll
-import           Data.List              (isInfixOf)
-import           System.FilePath.Posix  (takeBaseName, takeDirectory,
-                                         (</>), splitFileName)
+import Data.Monoid (mappend)
+import Hakyll
+import Data.List (isInfixOf)
+import System.FilePath.Posix  (takeBaseName, takeDirectory,
+                               (</>), splitFileName)
 
 import Text.Pandoc
 import Text.Pandoc.Shared
-import Text.Pandoc (bottomUp, Extension(Ext_markdown_in_html_blocks),
-                    HTMLMathMethod(MathML), Inline(..),
+import Text.Pandoc (HTMLMathMethod(MathML),
                     ObfuscationMethod(NoObfuscation), Pandoc(..),
                     ReaderOptions(..), WriterOptions(..))
 -- TODO
--- [X] RSS
--- [X] Proper link structure (e.g. no .md, no .html)
--- [-] Proper Homepage (n posts, first m sentences).
--- [X] Proper Archive Page.
--- [X] Proper Markdown syntax highlighting.
--- [X] Images linked & working.
--- [X] CSS.
--- [-] Test Google Analytics, RSS.
--- [X] Deploy.
 -- [] "Link-type" post.
 --------------------------------------------------------------------------------
 
@@ -37,7 +27,7 @@ main = hakyll $ do
 
     match "css/*" $ do
       route   idRoute
-      compile compressCssCompiler
+      compile copyFileCompiler
 
     match "posts/*md" $ do
       route $ niceRoute `composeRoutes` (gsubRoute "^posts" (const "p"))
