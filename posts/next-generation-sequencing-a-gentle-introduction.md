@@ -3,7 +3,7 @@ layout: post
 title: Next Generation Sequencing: A Gentle Introduction
 summary: Wherein next generation sequencing and its applications are discussed.
 categories: genomics bioinformatics
-date: 2014-07-22
+date: 2014-08-05
 ---
 
 ##### (A Gentle Introduction for the Slightly Bewildered)
@@ -33,7 +33,7 @@ the nucleobases of DNA[^nucleobases] (adenosine, thymine, guanine, cytosine),
 learn to isolate DNA[^freddy] (without knowing what it was), and guess at the
 structure of it using X-rays[^dna-structure].
 
-![Walther Flemming's Drawings of Mitosis](http://link.isaachodes.io/image/0z0W3Q3y2R2b/Zellsubstanz-Kern-Kerntheilung.jpg)
+![Walther Flemming's Drawings of Mitosis](/images/cell-obvs.jpg)
 
 The two bodies of work were unified in 1902 by Walter Sutton and Theodor Boveri
 in what is now known as the "Boveri–Sutton chromosome theory". Simply stated,
@@ -88,7 +88,7 @@ incorporated is also added. A bunch of DNA polymerase (a protein which
 constructs from a single strand of DNA the now famous paired double helix
 structure) is added to the solutions, and the reaction is allowed to run.
 
-![[Reading](http://www.bio.davidson.edu/courses/molbio/molstudents/spring2003/obenrader/sanger_method_page.htm) the sequence](http://link.isaachodes.io/image/1l3t3y0P1k1y/autoradiogram.gif)
+![[Reading](http://www.bio.davidson.edu/courses/molbio/molstudents/spring2003/obenrader/sanger_method_page.htm) the sequence](/images/autoradiogram.gif)
 
 Because of these special terminating bases, the reaction randomly stops at a
 given point, leaving varying-length fragments of DNA all terminating with the
@@ -151,7 +151,7 @@ at all. Much research is being done on faster and more accurate methods of *de
 novo* assembly, as it may be important for variant calling (I'll explain what
 that is later).
 
-![An Example of an IGV pileup](http://link.isaachodes.io/image/0h0m03461E1l/Screen%20Shot%202014-05-18%20at%209.38.28%20PM.png)
+![An Example of an IGV pileup](/images/igv.png)
 
 Above you can see many short reads (grey lines) overlapping one another and
 being mapped to the reference sequence, below. The deeper the average overlap of
