@@ -83,7 +83,7 @@ article header time { font-family: Inconsolata, courier, monospace; }
 article blockquote:before {
     content: "“";
     margin-left: -90px;
-    margin-top: -35px;
+    margin-top: 15px;
     position: absolute;
     font-size: 7em;
 }
