@@ -108,7 +108,7 @@ Generation Sequencing" or "NGS".[^tnng]
 
 Next Generation Sequencing isn't a single method, but rather a few different
 methods that all result in much higher throughput and lower prices for
-sequencing DNA. Prices are now as low as $1,000[^price theory] for a whole
+sequencing DNA. Prices are now as low as $1,000[^price-theory] for a whole
 genome sequence, putting them well in the range of a clinical test. DNA
 sequencing is increasingly being used for, among other things, cancer screening
 (oncogenetics), as well as to determine reactions to and efficacy of certain
@@ -350,7 +350,7 @@ ever before.
 [^illumina]: [Illumina.com](http://www.illumina.com/).
 [^shotgun]: If we're being pedantic, shotgun sequencing has a slightly different meaning, as it has to do with a specific technology that is no longer in use, but the idea and effect are the same.
 [^fastqwiki]: [FASTQ on Wikipedia](http://en.wikipedia.org/wiki/FASTQ_format).
-[^refseq]: A reference sequence is a sequencing which is known to some high degree of certainty. They are created by resequencing the same DNA over and over, until the likelihood of an error at any given point is very low.
+[^refseq]: A reference sequence is a sequence which is known to some high degree of certainty. They are created by resequencing the same DNA over and over, until the likelihood of an error at any given point is very low. There are [few reference sequences](https://answers.dnanexus.com/p/183/) used, and the are generally (with exceptions and caveats galore) trusted to be accurate.
 [^phred]: [Phred quality scores, Wikipedia](http://en.wikipedia.org/wiki/Phred_quality_score).
 [^cigar]: The CIGAR string is worth reading more about, and [Matt Massie's blog](http://zenfractal.com/2013/06/19/playing-with-matches/) is best place to go for it.
 [^bqsr]: [Introduction to Base Quality Score Recalibration (BQSR)](http://zenfractal.com/2014/01/25/bqsr/).
@@ -365,5 +365,5 @@ ever before.
 [^tnng]: There happens to be a next next generation of sequencing currently being researched, focusing on obtaining e.g. longer read lengths (which makes it easier to detect certain mutations called structural variants) and better error profiles, as well as more speed. Since, for the most part, these aren't being used yet, I'll just point you to the [Wikipedia article explaining these new methods](http://en.wikipedia.org/wiki/DNA_sequencing#Methods_in_development) (they're very cool).
 [^traits]: Also known as [phenotypes](http://en.wikipedia.org/wiki/Phenotype).
 [^methods]: It turns out that molecular biology is largely driven by tools. These tools are generally better ways of visualizaing the workings of cells and sub-cellular structures. Most great discoveries in biology are preceeded by great tools.
-[^price theory]: Well, they are in theory as low as that. No genomics core that I'm aware of yet offers sequencing for near that price.
+[^price-theory]: Well, they are in theory as low as that. No genomics core that I'm aware of yet offers sequencing for near that price.
 [^pipelines]: Well, "must" is putting it a little strongly. There are various pipelines which implement various strategies for processing sequences. Not all require steps such as BQSR, but it's worth mentioned because, right now, it crops up a lot.

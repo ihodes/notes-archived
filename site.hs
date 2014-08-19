@@ -21,6 +21,10 @@ main = hakyll $ do
       route   idRoute
       compile copyFileCompiler
 
+    match "resources/**" $ do
+      route   idRoute
+      compile copyFileCompiler
+
     match "js/**" $ do
       route   idRoute
       compile copyFileCompiler

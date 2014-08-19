@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# create variables
+while read L; do
+    k="`echo "$L" | cut -d '=' -f 1`"
+    v="`echo "$L" | cut -d '=' -f 2`"
+    export "$k=$v"
+done < <(grep -e '^\(title\|artist\|album\|stationName\|songStationName\|pRet\|pRetStr\|wRet\|wRetStr\|songDuration\|songPlayed\|rating\|coverArt\|stationCount\|station[0-9]*\)=' /dev/stdin) # don't overwrite $1...
+
+case "$1" in
+    songexplain)
+	growlnotify -t "$title" -m "by $artist on $album" --image=/Users/isaachodes/.config/pianobar/icon.png
+	;;
+    
+    songlove)
+	growlnotify -t "Loved" -m "$title by $artist on $album" --image=/Users/isaachodes/.config/pianobar/icon.png
+	;;
+
+    songban)
+	growlnotify -t "Banned" -m "$title by $artist \n on $album" --image=/Users/isaachodes/.config/pianobar/icon.png
+	;;    
+esac
+
