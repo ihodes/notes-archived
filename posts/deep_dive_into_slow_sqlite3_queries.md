@@ -96,7 +96,7 @@ INDEX` query takes 5 minutes to run?
 ### Deeper Still: The SQLite Virtual Machine
 
 A reasonable place to start is to run `EXPLAIN` on the query. The generated
-opcodes are rather long, so I've included the full readout [elswhere][1]. The
+opcodes are rather long, so I've included the full readout [elsewhere][1]. The
 relevant parts are below.
 
     7   OpenAutoindex  4    10    0   k(10,nil,n..  00
@@ -160,7 +160,7 @@ time (or even less; I have not yet witnessed the end of the autoindex).
 Now, to be clear, once there's an index on this table, both 3.7.13 and 3.8.5 run
 the same, very snappy queries. Adding an index is the right thing to do
 regardless of how SQLite handles the above. There is also
-[a pragma statement][pragma] which disables the abominally slow autoindexer.
+[a pragma statement][pragma] which disables the abominably slow autoindexer.
 The query above also clearly isn't a useful one; I'll just reiterate that it was
 based off of a much larger query that I pared down to exhibit the same behavior
 but resulting in fewer than 100 opcodes to step through & debug.
