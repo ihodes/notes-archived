@@ -6,6 +6,8 @@ categories: databases
 date: 2014-09-07
 ---
 
+<section>
+
 I've recently run into a couple behaviors which I found odd with respect to how
 SQLite decided to execute a particular query (and those with some similar
 characteristics). These oddities appear in both in how the query planner works
@@ -13,6 +15,8 @@ and in the generated opcodes. I decided to take a look at what was going on, and
 soon found myself reading the source, tracing syscalls and library calls, and
 debugging the opcodes from the VM that SQLite implements. I learned an
 incredible amount, and had a lot of fun. Some of my findings are below.
+
+</section>
 
 ---
 

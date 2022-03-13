@@ -31,7 +31,7 @@ main = hakyll $ do
       route   idRoute
       compile copyFileCompiler
 
-    match "css/*" $ do
+    match "css/**" $ do
       route   idRoute
       compile copyFileCompiler
 
