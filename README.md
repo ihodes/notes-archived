@@ -1,7 +1,11 @@
-### To Generate:
+### To use:
 
-    ghc --make site.hs
-    ./site rebuild
-    ./site watch
+    make 
+    make build
+    make watch
+    
+    
+Add posts by adding .md to `isaachodes.io/posts`
+
 
 And off I go!
