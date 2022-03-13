@@ -1,7 +1,8 @@
 <article class="post">
-  <header>
-    <h1 class="title">$title$</h1>
-    <time datetime="$rdate$" class="pubdate">$date$</time>
-  </header>
+  <h1 class="title">$title$</h1>
+  $if(subtitle)$
+  <p class="subtitle">$subtitle$</p>
+  $endif$
+  <p class="byline">$date$$if(author)$ &ndash; $author$$endif$</p>
   $body$
 </article>
