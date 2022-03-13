@@ -5,9 +5,11 @@ summary: Wherein we configure Pianobar to integrate with one's workflow.
 categories: hacking
 date: 2011-05-29
 ---
+<section>
 If you love using Pandora, but really wish they had a command-line (or at least non-Flash) version of the desktop application, this post will make your day. An absolutely wonderful CLI utility called <a href="https://github.com/PromyLOPh/pianobar">pianobar</a> solves this problem for you, and a few more you didn't know you had. Something to note: there are no advertisements when using pianobar; this may be violating Pandora's terms of service. Because I think Pandora is supplying a great service, I pay for the <span>\$</span>3/month Pandora+ membership and would not be hearing advertisements anyway: if this method seems like a great way to listen to music I'd recommend you pay the <span>\$</span>36 too.
 
-This tutorial will only cover setting up this environment on a Mac, though if you're running Linux you should be able to do much of the same using a few different applications in some cases.
+<p>This tutorial will only cover setting up this environment on a Mac, though if you're running Linux you should be able to do much of the same using a few different applications in some cases.</p>
+</section>
 
 ## What You'll Need
 

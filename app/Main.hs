@@ -137,5 +137,5 @@ articleWriterOptions :: WriterOptions
 articleWriterOptions = defaultHakyllWriterOptions
     { writerEmailObfuscation = NoObfuscation,
       writerHTMLMathMethod   = Text.Pandoc.MathML,
-      writerSectionDivs = True,
+      writerSectionDivs = True
     }

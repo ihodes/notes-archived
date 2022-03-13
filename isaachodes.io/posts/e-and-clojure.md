@@ -6,6 +6,7 @@ categories: clojure programming math
 date: 2010-08-20
 ---
 
+<section>
 A few articles made the rounds a number of weeks ago, all talking about computing Euler's Number, e, using Clojure. It wasn't until I saw the idea on [Programming Praxis][2], though, that I decided to just do it.
 
 It's honestly a trivial problem; in fact, here's a little solution right up front:
@@ -111,7 +112,8 @@ Now, I hate to break it to you, but these are not the methods used to calculate 
 
 There's a particular program called PiFast33 that was written by Xavier Gordon around the year 2000. That program, or variants of it, is what is being used to calculate e with such great precision. According to [this site][6], which appears to be connected to Gordon in some fashion, PiFast33 uses the alternating version of the series described above to calculate e. The error shrinks rapidly, allowing the digits of e to be verified and written to the storage file quickly and efficiently.
 
-It looks like an interesting program to try to write; maybe I'll get the chance to hack it up and post about it soon.
+<p>It looks like an interesting program to try to write; maybe I'll get the chance to hack it up and post about it soon.</p>
+</section>
 
  [1]: http://copperthoughts.com
  [2]: http://programmingpraxis.com/2010/08/13/e/

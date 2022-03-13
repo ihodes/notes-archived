@@ -6,10 +6,12 @@ categories: marion-tech architecture
 date: 2013-10-24
 ---
 
-
+<section>
 Many backend systems, while difficult and expensive to construct, are very similar to one another in a fundamental way; they manage state, over time, as it responds to external events.
 
 By creating a framework that models these as "networked state machines" which are easy to create and to edit, it makes it simple to build a backend suitable for launching a simple courier service in minutes, not weeks.
+
+</section>
 
 ---
 

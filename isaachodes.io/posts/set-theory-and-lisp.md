@@ -5,9 +5,12 @@ summary: Wherein I draw parallels between Lisp and Set Theory.
 categories: programming math
 date: 2010-09-01
 ---
+
+<section>
 A few weeks ago a provoking question was posted on StackOverflow asking if, for example, Common-Lisp's `numberp` could be written using only the primitives that John McCarthy presented in [his now famous essay introducing LISP](http://www-formal.stanford.edu/jmc/recursive.html).
 
-My answer was yes, but it wasn't the kind of yes you might expect. In his essay, McCarthy did not even mention numbers. There are no primitives to deal with them; only primitives to construct and deconstruct lists (i.e `car`, `cdr`, `cons`), as well as a few to enable the creation and naming of functions (i.e. `lambda`, `label`). But there are no number primitives: no direct interaction with the ALU, no way to directly access and manipulate integers and floats. So we have figure something else out.
+<p>My answer was yes, but it wasn't the kind of yes you might expect. In his essay, McCarthy did not even mention numbers. There are no primitives to deal with them; only primitives to construct and deconstruct lists (i.e `car`, `cdr`, `cons`), as well as a few to enable the creation and naming of functions (i.e. `lambda`, `label`). But there are no number primitives: no direct interaction with the ALU, no way to directly access and manipulate integers and floats. So we have figure something else out.</p>
+</section>
 
 ## It's All Lists From Here
 

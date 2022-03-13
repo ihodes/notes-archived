@@ -5,6 +5,8 @@ summary: Wherein I attempt to elucidate, for a Clojurist, the use of Java.
 categories: clojure programming
 date: 2010-08-22
 ---
+
+<section>
 Judging from the buzz on Twitter, the mailing list, Hacker News and other places where this kind of buzz occurs, Clojure's popularity is rapidly growing. The thing is, according to [Chas Emerick's State of Clojure][1] published earlier this summer, most of the people coming to Clojure don't have much experience with Java. This would be fine but, sooner or later, you'll think you need Java. How often you actually do to use Java is debatable; most of the time, something basic you find yourself needing may very well be in clojure.contrib or on Github, but chances are you'll be recommended a Java library or two to accomplish a task you may not know how to in Clojure. And that's okay.
 
 Using Java from Clojure is actually pretty painless, contrary to what people who haven't tried doing it say, but first you need to have at least a *basic* grasp on how to use Java. If you've had any experience with another object oriented language, then getting started with Java is just a matter of pulling up your sleeves and searching through the JavaDocs for what you need. Of course, you may need a refresher too. And using Java from Clojure can be a *little* strange at first.
@@ -12,6 +14,8 @@ Using Java from Clojure is actually pretty painless, contrary to what people who
 This guide doesn't aim to comprehensively cover all the ways to use Java from Clojure, nor does it attempt to explain the intricacies of Java the language or the JVM. Rather, it should serve as a "Getting Started with Java from Clojure" guide that will hopefully enable you to more easily navigate the Java documentation and use Java in your Clojure projects when the need arises. One of the nice things about Clojure is that you don't really need to know Java to use it from Clojure.
 
 So, without further ado:
+
+</section>
 
 # A Clojurist's Guide to Java
 

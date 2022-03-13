@@ -1,10 +1,11 @@
 ---
 layout: post
-title: The Ins and Outs of Clojure: Part I
+title: "The Ins and Outs of Clojure: Part I"
 summary: Wherein I explain how to perform IO with Clojure & Java.
 categories: clojure programming
 date: 2010-11-13
 ---
+
 <small>(Written about Clojure 1.2.)</small>
 
 It is a truth universally acknowledged, that a programmer using Clojure will want to perform IO. Let me help you out (put).

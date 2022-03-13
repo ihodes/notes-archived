@@ -6,6 +6,8 @@ categories: math
 date: 2014-07-16
 ---
 
+<section>
+
 I got a message from [Omar Camarena](http://www.math.harvard.edu/~oantolin/)
 about my post "[e and Clojure](/p/e-and-clojure)"; I had misstated an identity
 equating e to the expectation of a random process. The (now fixed) statement (taken
@@ -53,13 +55,17 @@ that that last sum is a definition of e.
 
 Verifying this with a bit of Python is fun.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ {.python}
+<figure>
+```python
 def fac(n): return reduce(lambda a, b: a * b, range(1, n+1), 1)
 
 reduce(lambda a, n: a + float(n)/fac(n), range(1, 50), 0)
 => 2.7182818284590455
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+</figure>
 
 So there you have it. e is, in fact, the expected number of draws from our pool
 of uniform 0&mdash;1 until we hit or pass 1. The world is a saner place, and now
 I can sleep.
+
+</section>
