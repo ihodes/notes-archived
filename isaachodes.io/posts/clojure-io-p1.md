@@ -6,17 +6,21 @@ categories: clojure programming
 date: 2010-11-13
 ---
 
+
+<section>
 <small>(Written about Clojure 1.2.)</small>
 
 It is a truth universally acknowledged, that a programmer using Clojure will want to perform IO. Let me help you out (put).
 
 I'll go over some of the basics of IO, focusing on what you can use Clojure to do directly. I'll move on after the basic introduction, to some of the more interesting and generally useful classes that Java offers, giving a little context for each.
 
-## In
+</section>
+
+# In
 
 Reading files in is generally one of the first things I want to do when playing with a new language, so I'll start there. Before I get started though, I should mentioned that in Clojure, strings are always encoded using UTF-16. Generally this saves time and worry, but it's something to keep in mind should you run into problems on the encoding front.
 
-#### slurp
+## slurp
 
 Clojure comes with a handy little function called [`slurp`](http://clojure.github.com/clojure/clojure.core-api.html#clojure.core/splurp) that takes in a string representing a filename (or, really, pretty much anything; a File, a stream, a byte array, URL, etc) and returns a string containing the contents of your file. It's pretty handy if you just need to get some information from a file that's relatively small, and you'll be parsing it yourself.
 
@@ -35,7 +39,7 @@ But `slurp` is pretty basic, and once your files get large enough, totally impra
 
 As a useful and comical aside, the function [`spit`](http://clojure.github.com/clojure/clojure.core-api.html#clojure.core/spit) is the counterpart to `slurp`, except that instead of reading input, `spit` does output. More on this in a future article, though.
 
-#### line-seq
+## line-seq
 
 One of my favorite IO functions has got to be `line-seq`; `line-seq` takes a reader object (which must implement `BufferedReader`) and returns a lazy sequence of the lines of the text the reader supplies. This is handy when you're dealing with files (if this offends you, let's be Unixy here for now and say that *everything is a file*) that are too big to merely `slurp`, but that are `\newline` delimited (or CR/LF delimited, if you're of the Windows persuasion).
 
@@ -64,7 +68,7 @@ This might give you a better sense of what's going on when you use `reader`, tho
 
 While on the subject of files, I should probably mentioned the `file` function, from `clojure.java.io`. `file` takes in an arbitrary number of string arguments, and pieces them together into a file hierarchy, returning a `File` instance. This can come in handy.
 
-#### Rivers? inputStreams? Brooks?
+## Rivers? inputStreams? Brooks?
 
 Streams are an especially useful class of readers. Oftentimes you're reading in text; that's what `Readers` do. But often you need to read in a stream of bytes; that's where you need to use `clojure.java.io`'s `input-stream`.
 
@@ -83,7 +87,7 @@ As you can see, instead of getting characters from this file (like we get when w
 
 In general, strings are *always* UTF-16, which are 16-bit pieces of data, whereas byte-streams are 8-bit pieces of data. It bears repeating that the stream operators should be used when you're not dealing with strings: they are *not* trivially interchangeable, as they might be in other languages where strings are syntactic sugar for byte arrays.
 
-#### RandomAccessFile
+## RandomAccessFile
 
 Finally, let me introduce to you a spectacularly useful Java class. `RandomAccessFile` is a class which allows you to quickly jump around in a large file, and read bytes from it.
 
@@ -108,7 +112,7 @@ Note the second argument of the constructor, *"r"*; this indicates  that we're o
 
 As you can see, you can jump around (quickly!) through a file, and read from the parts you want, and skip the parts you do not want. The key methods/functions here (among many others that can also be useful; be sure to check the [documentation](http://download.oracle.com/javase/6/docs/api/java/io/RandomAccessFile.html)) are `read`, `length`, `skipBytes`, `seek` and `getFilePointer`.
 
-#### Closing
+## Closing
 
 Every file that is opened should be closed, and what we've been doing is a little unsafe. In order to close an open reader/file, we should use the `close` method on it; in the above example, when you're done with `f`, simply execute `(.close f)` to tell the file system that you're done with the file. Alternatively, and more idiomatically, you can open your files with the handy `with-open` binder:
 
@@ -119,7 +123,7 @@ Every file that is opened should be closed, and what we've been doing is a littl
 
 When you're done with `f`, Clojure will `close` it, and you won't have to worry one iota about it.
 
-#### Digging Deeper
+## Digging Deeper
 
 Should `slurp` and `line-seq` not be enough for your reading needs (and chances are that, should you code enough in Clojure, they won't always been), you might want to explore `clojure.java.io` some more, as well as some of the Java classes (namely, those stemming from `Reader` and `BufferedReader`, as well as `InputStream` and `BufferedInputStream`)  mentioned above. See my [previous article on using Java](http://copperthoughts.com/p/clojurists-guide-to-java/) if you're unfamiliar with using Java.
 

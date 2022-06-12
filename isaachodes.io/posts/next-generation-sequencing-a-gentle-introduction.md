@@ -36,6 +36,7 @@ the nucleobases of DNA[^nucleobases] (adenosine, thymine, guanine, cytosine),
 learn to isolate DNA[^freddy] (without knowing what it was), and guess at the
 structure of it using X-rays[^dna-structure].
 
+
 ![Walther Flemming's Drawings of Mitosis](/images/cell-obvs.jpg)
 
 The two bodies of work were unified in 1902 by Walter Sutton and Theodor Boveri

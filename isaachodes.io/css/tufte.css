@@ -131,7 +131,7 @@ dl,
 ol,
 ul {
     font-size: 1.4rem;
-    line-height: 2rem;
+    line-height: 2.2rem;
 }
 
 p {
@@ -212,7 +212,6 @@ figure {
 }
 
 figcaption {
-    float: right;
     clear: right;
     margin-top: 0;
     margin-bottom: 0;
@@ -220,7 +219,7 @@ figcaption {
     line-height: 1.6;
     vertical-align: baseline;
     position: relative;
-    max-width: 40%;
+    max-width: 100%;
 }
 
 figure.fullwidth figcaption {
